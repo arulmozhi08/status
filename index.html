@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Status</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="logo">
             <img src="company_logo.png" alt="Company Logo">
         </div>
-        <h1>Welcome to Machine Status</h1>
+        <h1 class="header-title">Welcome to Machine Status</h1>
     </header>
     <main>
         <section class="welcome">
@@ -24,13 +25,13 @@
             <div class="machine-list">
                 <div class="machine">
                     <a href="machine1.html">
-                        <img src="machine1.jpg" alt="Machine 1">
+                        <img src="machine1.jpg" alt="Machine 1" data-machine="1" class="machine-img">
                         <h3>Machine 1</h3>
                     </a>
                 </div>
                 <div class="machine">
                     <a href="machine2.html">
-                        <img src="machine2.jpg" alt="Machine 2">
+                        <img src="machine2.jpg" alt="Machine 2" data-machine="2" class="machine-img">
                         <h3>Machine 2</h3>
                     </a>
                 </div>
@@ -38,8 +39,9 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 Your Company</p>
     </footer>
 </body>
 </html>
+
