@@ -3,9 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-header {
+.header {
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -19,25 +20,13 @@ header {
     left: 20px;
 }
 
-.logo img {
-    max-height: 50px;
-}
-
-h1 {
+.header-title {
     margin-top: 70px;
-}
-
-main {
-    padding: 20px;
 }
 
 .welcome-content {
     max-width: 600px;
     margin: 0 auto;
-}
-
-.machine-types {
-    margin-top: 50px;
 }
 
 .machine-list {
@@ -49,19 +38,9 @@ main {
 .machine {
     margin: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.machine:hover {
-    transform: scale(1.05);
-}
-
-.machine a {
-    text-decoration: none;
-    color: #333;
-}
-
-.machine img {
+.machine-img {
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -69,15 +48,11 @@ main {
     transition: transform 0.3s ease;
 }
 
-.machine img:hover {
+.machine-img:hover {
     transform: scale(1.1);
 }
 
-.machine h3 {
-    margin-top: 10px;
-}
-
-footer {
+.footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -86,3 +61,38 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Animation keyframes */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
